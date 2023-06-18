@@ -245,6 +245,7 @@ if (!(webvium === undefined)) {
     webvium.print();
 }
 ```
+---------------------------------------
 
 ### Check if WebviumHashHelper Object undefined or not
 ```js
@@ -255,10 +256,157 @@ if (!(WebviumHashHelper === undefined)) {
 }
 ```
 
-// data coming soon
+---------------------------------------
+
+### WebviumHashHelper.encodeMD5(text, boolean)
+
+Converts the text to the popular MD5
+
+__Arguments__
+
+* `text` - The plain text you want to encrypt
+* `boolean` - If the encoder gonna use random bytes to encode it.
+
+__Example__
+
+```js
+let webviumHashHelper = WebviumHashHelper;
+
+if (!(webviumHashHelper === undefined)) {
+    webviumHashHelper.encodeMD5("Hello World", false);
+}
+```
 
 ---------------------------------------
 
+### WebviumHashHelper.encodeSHA(type, text, boolean)
+
+Converts the text to the popular SHA
+
+__Arguments__
+
+* `type` - Its either of SHA-1, SHA-224, SHA-256 and SHA-384.
+* `text` - The plain text you want to encrypt
+* `boolean` - If the encoder gonna use random bytes to encode it.
+
+__Example__
+
+```js
+let webviumHashHelper = WebviumHashHelper;
+
+if (!(webviumHashHelper === undefined)) {
+    webviumHashHelper.encodeSHA("SHA-1", "Hello World", false);
+}
+```
+
+---------------------------------------
+
+### WebviumHashHelper.encodeXOR(text, key)
+
+Converts the text to the XOR
+
+__Arguments__
+
+* `text` - The plain text you want to encrypt
+* `key` - The key that encoder needs to encode and decode the XOR
+
+__Example__
+
+```js
+let webviumHashHelper = WebviumhashHelper;
+
+if (!(webviumHashHelper === undefined)) {
+    webviumHashHelper.encodeXOR("Hello World", "E");
+}
+```
+
+---------------------------------------
+
+### WebviumHashHelper.encodeCaesar(text, padding)
+
+Converts the text to Caesar Cipher
+
+__Arguments__
+
+* `text` - The plain text you want to encrypt
+* `padding` - The padding that encoder needs to encode and decode the Caesar
+
+__Example__
+
+```js
+let webviumHashHelper = WebviumhashHelper;
+
+if (!(webviumHashHelper === undefined)) {
+    webviumHashHelper.encodeCaesar("Hello World", 13);
+}
+```
+
+---------------------------------------
+
+### WebviumHashHelper.encodeAES256(text, key, saltPhrase)
+
+Converts the text to AES-256 encryption algorithm
+
+__Arguments__
+
+* `text` - The plain text you want to encrypt
+* `key` - The key that the encoder will use to encrypt the text.
+* `saltPhrase` - Random text phrase that the encoder will use to hardened the encryption
+
+__Example__
+
+```js
+let webviumHashHelper = WebviumhashHelper;
+
+if (!(webviumHashHelper === undefined)) {
+    webviumHashHelper.encodeAES256("Hello World", "nmnm", "qwqe");
+}
+```
+
+---------------------------------------
+
+### WebviumHashHelper.decodeAES256(text, key, saltPhrase)
+
+Decodes the encrypted text using AES-256 encryption algorithm
+
+__Arguments__
+
+* `text` - The plain text you want to encrypt
+* `key` - The key that the encoder will use to encrypt the text.
+* `saltPhrase` - Random text phrase that the encoder will use to hardened the encryption
+
+__Example__
+
+```js
+let webviumHashHelper = WebviumhashHelper;
+
+if (!(webviumHashHelper === undefined)) {
+    webviumHashHelper.decodeAES256("Hello World", "nmnm", "qwqe");
+}
+```
+
+
+---------------------------------------
+
+### WebviumHashHelper.getRandomBytes()
+
+Decodes the encrypted text using AES-256 encryption algorithm
+
+__Returns__
+
+* `byte[]` - A secure random byte
+
+__Example__
+
+```js
+let webviumHashHelper = WebviumhashHelper;
+
+if (!(webviumHashHelper === undefined)) {
+    console.log(webviumHashHelper.getRandomBytes());
+}
+```
+
+---------------------------------------
 
 ### Check if WebviumSearchHelper Object undefined or not
 ```js
@@ -272,7 +420,6 @@ if (!(WebviumSearchHelper === undefined)) {
 // data coming soon
 
 ---------------------------------------
-
 
 ### Check if WebviumSearchSuggestion Object undefined or not
 ```js
